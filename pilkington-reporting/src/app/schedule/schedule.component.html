@@ -1,0 +1,265 @@
+<!-- Extended material form grid -->
+<div class="row">
+   <h3>Scheduling</h3>
+</div>
+
+<div class="row">
+      <p>Schedule an appointment with Pilkington Reporting today.</p>
+</div>
+
+<div class="row">
+   <h5>Contact Information</h5>
+</div>
+<form [formGroup]="apapointment">
+                <!-- Grid row -->
+                <div class="type form-row">
+                   <!-- Grid column -->
+                   <div class="col-md-6">
+                      <!-- Material input -->
+                      <div class="md-form form-group">
+                         <input mdbInput type="email" class="form-control" id="inputEmail4MD" placeholder="John Doe" [formControl]="schedulingAttorneyName">
+                         <label for="inputEmail4MD">Scheduling Attorney Name</label>
+                      </div>
+                   </div>
+                   <!-- Grid column -->
+                   <!-- Grid column -->
+                   <div class="col-md-6">
+                      <!-- Material input -->
+                      <div class="md-form form-group">
+                         <input mdbInput type="text" class="form-control" id="inputPassword4MD" placeholder="John's Law Firm" [formControl]="firmName">
+                         <label for="inputPassword4MD">Firm Name</label>
+                      </div>
+                   </div>
+                   <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+                <!-- Grid row -->
+                <div class="form-row">
+                   <!-- Grid column -->
+                   <div class="col-md-6">
+                      <!-- Material input -->
+                      <div class="md-form form-group">
+                         <input mdbInput type="text" class="form-control" id="inputEmail4MD" placeholder="1234 Main St" [formControl]="firmAddress">
+                         <label for="inputEmail4MD">Firm Address</label>
+                      </div>
+                   </div>
+                   <!-- Grid column -->
+                   <!-- Grid column -->
+                   <div class="col-md-6">
+                      <!-- Material input -->
+                      <div class="md-form form-group">
+                         <input mdbInput type="text" class="form-control" id="inputPassword4MD" placeholder="123-456-7890" [formControl]="firmPhoneNumber">
+                         <label for="inputPassword4MD">Firm Phone Number</label>
+                      </div>
+                   </div>
+                   <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+                <!-- Grid row -->
+                <div class="form-row">
+                   <!-- Grid column -->
+                   <div class="col-md-4">
+                      <!-- Material input -->
+                      <div class="md-form form-group">
+                         <input mdbInput type="text" class="form-control" id="inputCityMD" placeholder="Lincoln" [formControl]="clientCity">
+                         <label for="inputCityMD">City</label>
+                      </div>
+                   </div>
+                   <!-- Grid column -->
+                   <!-- Grid column -->
+                   <div class="col-md-4">
+                      <!-- Material input -->
+                      <div class="md-form form-group">
+                         <input mdbInput type="text" class="form-control" id="inputCityMD" placeholder="Nebraska" [formControl]="clientState">
+                         <label for="inputCityMD">State</label>
+                      </div>
+                   </div>
+                   <!-- Grid column -->
+                   <!-- Grid column -->
+                   <div class="col-md-4">
+                      <!-- Material input -->
+                      <div class="md-form form-group">
+                         <input mdbInput type="text" class="form-control" id="inputZipMD" placeholder="68508" [formControl]="clientZip">
+                         <label for="inputZipMD">Zip</label>
+                      </div>
+                   </div>
+                   <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+                <!-- Grid row -->
+                <div class="form-row">
+                   <!-- Grid column -->
+                   <div class="col-md-12">
+                      <!-- Material input -->
+                      <div class="md-form form-group">
+                         <input mdbInput type="email" class="form-control" id="inputEmail4MD" placeholder="John Doe" [formControl]="yourName">
+                         <label for="inputEmail4MD">Your Name</label>
+                      </div>
+                   </div>
+                   <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+                <!-- Grid row -->
+                <div class="form-row">
+                   <!-- Grid column -->
+                   <div class="col-md-6">
+                      <!-- Material input -->
+                      <div class="md-form form-group">
+                         <input mdbInput type="email" class="form-control" id="inputEmail4MD" placeholder="johndoe@lawfirm.com" [formControl]="yourEmailAddress">
+                         <label for="inputEmail4MD">Your E-mail Address</label>
+                      </div>
+                   </div>
+                   <!-- Grid column -->
+                   <!-- Grid column -->
+                   <div class="col-md-6">
+                      <!-- Material input -->
+                      <div class="md-form form-group">
+                         <input mdbInput type="text" class="form-control" id="inputPassword4MD" placeholder="123-456-7890" [formControl]="yourPhoneNumber">
+                         <label for="inputPassword4MD">Your Phone Number</label>
+                      </div>
+                   </div>
+                   <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+                <!-- Grid row -->
+                <div class="form-row">
+                   <!-- Grid column -->
+                   <div class="col-md-12">
+                      <!-- Material input -->
+                      <div class="md-form form-group">
+                         <input mdbInput type="email" class="form-control" id="inputEmail4MD" placeholder="Marcy May" [formControl]="opposingCounselsName">
+                         <label for="inputEmail4MD">Opposing Counsel's Name</label>
+                      </div>
+                   </div>
+                   <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+     
+             </form>
+             <!-- Extended material form grid -->
+<hr>
+<!-- SCHEDULING INFORMATION -->
+<div class="row">
+   <h5>Scheduling Information</h5>
+</div>
+
+
+<form>
+   <div class="type">
+      <mat-form-field class="col-md-12">
+         <mat-select class="col-md-12" style="height: 30px;" id="inputType4MD" [(value)]="selected">
+            <mat-option value="Deposition">Deposition</mat-option>
+            <mat-option value="Hearing">Hearing</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+   </mat-form-field>
+   <label style="padding-right: 5px;" for="inputType4MD">Type</label>
+   </div>
+   <mat-form-field style="border-top-width: 0px !important;" appearance="outline" class="time col-md-6">
+      <input matInput [matDatepicker]="myDatepicker" placeholder="Deposition/Hearing Date" [formControl]="depositionDate">
+      <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #myDatepicker></mat-datepicker>
+   </mat-form-field>
+   <kendo-timepicker class="col-md-6" style="height: 50px;" [formControl]="time"></kendo-timepicker>
+   <div class="type">
+      <mat-form-field class="col-md-12">
+         <mat-select class="col-md-12" style="height: 30px;" id="inputType4MD" [(value)]="length">
+            <mat-option value="0-1 Hrs">0-1 Hrs</mat-option>
+            <mat-option value="1-2 Hrs">1-2 Hrs</mat-option>
+            <mat-option value="2-3 Hrs">2-3 Hrs</mat-option>
+            <mat-option value="All A.M.">All A.M.</mat-option>
+            <mat-option value="All P.M.">All P.M.</mat-option>
+            <mat-option value="All Day">All Day</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+      </mat-form-field>
+      <label style="padding-right: 5px;" for="inputType4MD">Expected Length</label>
+   </div>
+                <!-- Grid row -->
+                <div class="form-row type">
+                     <!-- Grid column -->
+                     <div class="col-md-6">
+                        <!-- Material input -->
+                        <div class="md-form form-group">
+                           <input mdbInput type="email" class="form-control" id="inputEmail4MD" placeholder="BlueSky Business" [formControl]="businessLocation">
+                           <label for="inputEmail4MD">Name of Business/Location</label>
+                        </div>
+                     </div>
+                     <!-- Grid column -->
+                     <!-- Grid column -->
+                     <div class="col-md-6">
+                        <!-- Material input -->
+                        <div class="md-form form-group">
+                           <input mdbInput type="text" class="form-control" id="inputPassword4MD" placeholder="357 Blue Blvd" [formControl]="locationAddress">
+                           <label for="inputPassword4MD">Location Address</label>
+                        </div>
+                     </div>
+                     <!-- Grid column -->
+                  </div>
+                  <!-- Grid row -->
+                                  <!-- Grid row -->
+                <div class="form-row">
+                     <!-- Grid column -->
+                     <div class="col-md-4">
+                        <!-- Material input -->
+                        <div class="md-form form-group">
+                           <input mdbInput type="text" class="form-control" id="inputCityMD" placeholder="Lincoln" [formControl]="jobCity">
+                           <label for="inputCityMD">City</label>
+                        </div>
+                     </div>
+                     <!-- Grid column -->
+                     <!-- Grid column -->
+                     <div class="col-md-4">
+                        <!-- Material input -->
+                        <div class="md-form form-group">
+                           <input mdbInput type="text" class="form-control" id="inputCityMD" placeholder="Nebraska" [formControl]="jobState">
+                           <label for="inputCityMD">State</label>
+                        </div>
+                     </div>
+                     <!-- Grid column -->
+                     <!-- Grid column -->
+                     <div class="col-md-4">
+                        <!-- Material input -->
+                        <div class="md-form form-group">
+                           <input mdbInput type="text" class="form-control" id="inputZipMD" placeholder="68508" [formControl]="jobZip">
+                           <label for="inputZipMD">Zip</label>
+                        </div>
+                     </div>
+                     <!-- Grid column -->
+                  </div>
+                  <!-- Grid row -->
+                                  <!-- Grid row -->
+                <div class="form-row">
+                     <!-- Grid column -->
+                     <div class="col-md-12">
+                        <!-- Material input -->
+                        <div class="md-form form-group">
+                           <input mdbInput type="email" class="form-control" id="inputEmail4MD" placeholder="" [formControl]="caseCaption">
+                           <label for="inputEmail4MD">Case Caption</label>
+                        </div>
+                     </div>
+                     <!-- Grid column -->
+                  </div>
+                  <!-- Grid row -->                <!-- Grid row -->
+                <div class="form-row">
+                     <!-- Grid column -->
+                     <div class="col-md-12">
+                        <!-- Material input -->
+                        <div class="md-form form-group">
+                       <input mdbInput type="email" class="form-control" id="inputEmail4MD" placeholder="" [formControl]="additionalServices">
+                           <label for="inputEmail4MD">Additional Services/Requests</label>
+                        </div>
+                     </div>
+                     <!-- Grid column -->
+                  </div>
+                  <!-- Grid row -->
+</form>
+<div class="row">
+      <button mat-raised-button class="scheduleButton" (click)="submit()">Schedule</button>
+</div>
+
+<div class="row">
+
+</div>
+
+
